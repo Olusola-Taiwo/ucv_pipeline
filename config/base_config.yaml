@@ -1,0 +1,27 @@
+project_name: "ucv_project"
+environment: "base"
+
+catalog: "unified_customers_view"
+
+paths:
+  raw_crm: "/Volumes/unified_customers_view/bronze/source_systems/crm"
+  raw_transactions: "/Volumes/unified_customers_view/bronze/source_systems/transactions"
+
+tables:
+  bronze_crm: "unified_customers_view.bronze.crm_raw"
+  bronze_transactions: "unified_customers_view.bronze.transactions_raw"
+
+  silver_crm: "unified_customers_view.silver.crm_clean"
+  silver_transactions: "unified_customers_view.silver.transactions_clean"
+
+  identity_deterministic: "unified_customers_view.identity_matching.deterministic"
+  identity_fuzzy: "unified_customers_view.identity_matching.fuzzy"
+  identity_mcid: "unified_customers_view.identity_matching.mcid"
+
+  gold_txn_agg: "unified_customers_view.gold.transactions_agg"
+  gold_ucv: "unified_customers_view.gold.customer_ucv"
+
+  quarantine_crm: "unified_customers_view.quarantine.crm_invalid"
+  quarantine_transactions: "unified_customers_view.quarantine.transactions_invalid"
+  quarantine_silver_crm: "unified_customers_view.quarantine.silver_invalid_crm"
+  quarantine_silver_txn: "unified_customers_view.quarantine.silver_invalid_transactions"
