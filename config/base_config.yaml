@@ -7,6 +7,9 @@ paths:
   raw_crm: "/Volumes/unified_customers_view/bronze/source_systems/crm"
   raw_transactions: "/Volumes/unified_customers_view/bronze/source_systems/transactions"
 
+  schema_crm: "/Volumes/unified_customers_view/bronze/source_systems/crm_schema"
+  schema_transactions: "/Volumes/unified_customers_view/bronze/source_systems/transactions_schema"
+
 tables:
   bronze_crm: "unified_customers_view.bronze.crm_raw"
   bronze_transactions: "unified_customers_view.bronze.transactions_raw"
